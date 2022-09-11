@@ -38,7 +38,12 @@ export const Container = styled.div`
 
 `;
  
-export const Content = styled.div``;
+export const Content = styled.div`
+    grid-area: content;
+    padding: 0px 64px;
+
+    overflow-y: auto;
+`;
  
 export const Menu = styled.ul`
     grid-area: menu;
