@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from 'styled-components';
 
-import { SignIn } from './pages/Home';
+import { SignIn } from './pages/SignIn';
 import GlobalStyles from './styles/global';
 import theme from './styles/theme';
 
