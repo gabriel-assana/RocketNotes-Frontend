@@ -3,10 +3,15 @@ import { Link } from 'react-router-dom';
 
 import { Button } from '../../components/Button';
 import { Input } from '../../components/Input';
+import { useAuth } from '../../hooks/auth';
 import { Background, Container, Form } from './styles';
 
 
 export function SignIn() {
+
+    const data = useAuth();
+    console.log("MEU CONTEXTO =>", data);
+    
     return(
         <Container>
             <Form>

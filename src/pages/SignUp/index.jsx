@@ -16,7 +16,7 @@ export function SignUp() {
 
     function handleSignUp(){
         if(!name || !email || !password ){
-            return alert("Preencha todos os campos")
+            alert("Preencha todos os campos");
         }
     }
 
@@ -24,8 +24,7 @@ export function SignUp() {
     .then(() => {
         alert("Usuário cadastrado com sucesso!");
         navigate("/");
-    })
-    .catch(error => {
+    }).catch(error => {
         if(error.response){
             alert(error.response.data.message)
         }else {
@@ -47,24 +46,24 @@ export function SignUp() {
                     placeholder="Nome"
                     type="text"
                     icon={FiUser}
-                    onChange={e => setName(e.target.value)}
+                    onChange={event => setName(event.target.value)}
                 />
 
                 <Input
                     placeholder="E-mail"
                     type="text"
                     icon={FiMail}
-                    onChange={e => setEmail(e.target.value)}
+                    onChange={event => setEmail(event.target.value)}
                 />
 
                 <Input
                     placeholder="Senha"
                     type="password"
                     icon={FiLock}
-                    onChange={e => setPassword(e.target.value)}
+                    onChange={event => setPassword(event.target.value)}
                 />
 
-                <Button title="Cadastrar" onClick={ handleSignUp }/>
+                <Button title="Cadastrar" onClick={handleSignUp}/>
 
                 <Link to="/">
                     Voltar para o login
