@@ -21,7 +21,7 @@ export function Profile() {
             name,
             email, 
             password: passwordNew,
-            password_old: passwordOld
+            old_password: passwordOld
         }
 
         await updateProfile({ user });
