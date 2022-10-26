@@ -16,6 +16,11 @@ export function Home() {
     const [notes, setNotes] = useState([]);
 
     function handleTagSelected(tagName){
+        
+        if(tagName === "all"){
+            return setTagsSelected([]);
+        }
+        
         const alreadySelected = tagsSelected.includes(tagName);
 
         if(alreadySelected){
@@ -59,7 +64,7 @@ export function Home() {
                 <li>
                     <ButtonText 
                         title="Todos" 
-                        onClick={() => handleTagSelected("All")}
+                        onClick={() => handleTagSelected("all")}
                         isActive={tagsSelected.length === 0}
                     />
                 </li>
